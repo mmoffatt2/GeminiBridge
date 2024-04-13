@@ -11,6 +11,10 @@
     border-radius: 4px;
     font-size: 16px;
   }
+
+  .white-underline:before {
+    border-bottom: 2px solid white !important; /* Set the underline color to white */
+  }
   
   .answer-button {
     padding: 10px 15px;

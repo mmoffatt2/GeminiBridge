@@ -9,22 +9,23 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import Typography from '@mui/joy/Typography';
 
-function VideoPlayer({ videoSrc, title, description }) {
+
+// chapter_dict={chapter_dict} curr_module={curr_module}
+function VideoPlayer({ videoSrc, chapter_dict, curr_module }) {
+
+  const submodule = chapter_dict.submodules[curr_module];
   return (
-    <Card sx={{ maxWidth: 1200 }}>
+    <Card sx={{ maxWidth: 1200}} style={{ backgroundColor: '#161616' }}>
       <CardMedia
         component="video"
         alt="green iguana"
         height="500"
-        src={"./videos/3.1.mp4"}
+        src={submodule.content.video_link}
         controls
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Module 3.1: Introduction
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Knowing pointers is important to getting your CS degree.
+      <CardContent >
+        <Typography gutterBottom component="div" sx={{ color: "white", fontWeight: 'bold', paddingTop:"0.5em", paddingBottom:"0.2em"}}>
+          Module: {submodule.index} ({submodule.title})
         </Typography>
       </CardContent>
     </Card>

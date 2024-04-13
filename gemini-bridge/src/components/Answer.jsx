@@ -19,14 +19,22 @@ const Answer = ({ onSubmitAnswer, setOnSubmitAnswer }) => {
     setUserAnswer(''); // Clear the input after submitting
   };
 
-  console.log(onSubmitAnswer);
-
   return (
-    <Grid container spacing={2} alignItems="center">
+    <div className="question-container" style={{ backgroundColor: '#161616', marginTop:"-2.5em" }}>
+      <Grid container spacing={2} alignItems="center" style={{ backgroundColor: '#161616' }}>
       <Grid item xs={9}>
-        <TextField
+        <TextField 
+          InputProps={{
+            style: { color: 'white', marginBottom: "1em"},
+            classes: {
+              underline: 'white-underline'
+            }
+          }}
+          InputLabelProps={{
+            style: { color: 'white' }
+          }}
           label="Your Answer"
-          variant="outlined"
+          variant="standard"
           fullWidth
           value={userAnswer}
           onChange={handleInputChange}
@@ -44,6 +52,8 @@ const Answer = ({ onSubmitAnswer, setOnSubmitAnswer }) => {
         </Button>
       </Grid>
     </Grid>
+    </div>
+    
     // <div>
     //   <TextField
     //     label="Your Answer"

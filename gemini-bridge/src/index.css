@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #080808;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,9 +31,17 @@ body {
 }
 
 h1 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   line-height: 1.0;
 }
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.0;
+  margin-bottom: 20px;
+}
+
+
 
 button {
   border-radius: 8px;
